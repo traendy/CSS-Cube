@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+<title>Dies das Cube</title>
+
+      
+      
+      
+      <style type="text/css">
+          .wrap {
+	           -webkit-perspective: 800px;
+			-webkit-perspective-origin: 50% 100px;
+
+			-moz-perspective: 800px;
+			-moz-perspective-origin: 50% 100px;
+
+			-ms-perspective: 800px;
+			-ms-perspective-origin: 50% 100px;
+
+			perspective: 800px;
+			perspective-origin: 50% 100px;
+          }
+          
+          .cube {
+                position: relative;
+                width: 200px;
+                margin: : 0 auto;
+              
+                -webkit-transform-style: preserve-3d;
+                -webkit-animation: spin 5s infinite linear;
+              
+              -moz-transform-style: preserve-3d;
+			-moz-animation: cube-spin 5s infinite linear;
+
+			-ms-transform-style: preserve-3d;
+			-ms-animation: cube-spin 5s infinite linear;
+
+              
+              
+          }
+          .cube div {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background: rgba(255,255,255,0.1);
+                box-shadow: inset 0 0 30px rgba(125,125,125,0.8);
+                font-size: 20px;
+                text-align: center;
+                line-height: 200px;
+                color: rgba(0,0,0,0.5);
+                font-family: sans-serif;
+                text-transform: uppercase;
+          }
+          
+          .back {
+                -webkit-transform: translateZ(-100px) rotateY(180deg);
+            }
+            .right {
+                -webkit-transform: rotateY(-270deg) translateX(100px);
+                -webkit-transform-origin: top right;
+            }
+            .left {
+                -webkit-transform: rotateY(270deg) translateX(-100px);
+                -webkit-transform-origin: center left;
+            }
+            .top {
+                -webkit-transform: rotateX(-90deg) translateY(-100px);
+                -webkit-transform-origin: top center;
+            }
+            .bottom {
+                -webkit-transform: rotateX(90deg) translateY(100px);
+                -webkit-transform-origin: bottom center;
+            }
+            .front {
+                -webkit-transform: translateZ(100px);
+            }
+          @keyframes spin {
+                from { transform: rotateY(0); }
+                to { transform: rotateY(360deg); }
+            }
+
+          #test{
+              margin-left: 140px;
+              margin-top: 200px;
+          }
+    
+    
+      </style>
+      
+ 
+    
+    
+    
+    </head>
+  <body>
+      <div id="test">
+      <div class="wrap">
+          <div class="cube">
+          <div class="front"><img src ="http://t1.gstatic.com/images?q=tbn:ANd9GcRiL7GyxjzGyes1zc17jjmJLCGmozdwwcyFdnr3LwFRsyKoMapZOamV"></div>
+          <div class="back">back</div>
+          <div class="top">top</div>
+          <div class="bottom">bottom</div>
+          <div class="left">left</div>
+          <div class="right">right</div>
+          </div>
+      </div>
+          
+          </div>
+  </body>
+</html>
